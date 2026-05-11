@@ -43,13 +43,14 @@ const scrollIndicatorVariants = {
 
 export function HeroSection() {
   return (
-    <section className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden bg-slate-900">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 opacity-90" />
-
-      {/* Animated Background Circles */}
-      <div className="absolute top-20 -right-20 w-96 h-96 bg-yellow-400 rounded-full opacity-10 blur-3xl animate-pulse" />
-      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-blue-400 rounded-full opacity-10 blur-3xl animate-pulse" />
+    <section 
+      className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: 'url(/images/hero-background.jpg)',
+      }}
+    >
+      {/* Dark Overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/40" />
 
       {/* Content */}
       <motion.div
@@ -60,7 +61,7 @@ export function HeroSection() {
       >
         {/* Main Headline */}
         <motion.h1
-          className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+          className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg"
           custom={0}
           variants={textVariants}
         >
@@ -68,29 +69,29 @@ export function HeroSection() {
         </motion.h1>
 
         <motion.h2
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-yellow-300 via-orange-400 to-yellow-300 bg-clip-text text-transparent mb-8 leading-tight"
+          className="text-3xl sm:text-5xl lg:text-5xl font-bold text-white mb-8 leading-tight drop-shadow-md"
           custom={1}
           variants={textVariants}
         >
-          Energizing Sustainable Innovation
+          Solusi Olahraga Modular Berkelanjutan
         </motion.h2>
 
         {/* Sub-headline */}
         <motion.p
-          className="text-lg sm:text-xl lg:text-2xl text-slate-300 max-w-2xl mb-10 leading-relaxed"
+          className="text-lg sm:text-xl lg:text-2xl text-white max-w-2xl mb-10 leading-relaxed drop-shadow-md"
           custom={2}
           variants={textVariants}
         >
-          Revolutionizing Physical Education Through Circular Economy Solutions
+          Merevolusi Pendidikan Jasmani melalui Ekosistem Ekonomi Sirkular dari Limbah Ban Bekas
         </motion.p>
 
         {/* Additional context */}
         <motion.p
-          className="text-base sm:text-lg text-slate-400 max-w-xl mb-12"
+          className="text-base sm:text-lg text-white/90 max-w-xl mb-12 drop-shadow-md"
           custom={3}
           variants={textVariants}
         >
-          From waste tires to educational excellence. Sustainable sports equipment, furniture, and curriculum modules.
+          Dari limbah ban menjadi keunggulan pendidikan. Peralatan olahraga berkelanjutan, furniture daur ulang, dan modul kurikulum inovatif.
         </motion.p>
 
         {/* CTA Button */}
@@ -99,7 +100,7 @@ export function HeroSection() {
             href="/solutions"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-slate-900 font-bold rounded-full text-lg transition-all hover:shadow-2xl hover:shadow-yellow-400/50 transform hover:scale-105"
           >
-            Explore Our Solutions
+            Jelajahi Solusi Kami
             <ChevronDown className="ml-2 rotate-270" size={24} />
           </Link>
         </motion.div>
@@ -112,7 +113,7 @@ export function HeroSection() {
         initial="hidden"
         animate="visible"
       >
-        <ChevronDown className="text-yellow-400" size={32} />
+        <ChevronDown className="text-yellow-400 drop-shadow-lg" size={32} />
       </motion.div>
     </section>
   );

@@ -33,32 +33,32 @@ const solutionTabs = [
     id: 'sports',
     label: 'Banafit Sports',
     icon: Dumbbell,
-    description: 'Modular training station equipment',
+    description: 'Peralatan stasiun latihan modular',
     content: {
-      tagline: 'Revolutionize PE Classes',
-      intro: 'Modular sports training stations built from sustainable recycled tires.',
+      tagline: 'Revolusionkan Pelajaran PE',
+      intro: 'Stasiun latihan olahraga modular yang dibangun dari ban daur ulang berkelanjutan.',
       products: [
         {
           name: 'Batlingban',
-          spec: 'Balance & Agility Trainer',
-          description: 'Develops coordination and core strength',
-          features: ['Modular design', 'Stackable configuration', 'Weather-resistant'],
+          spec: 'Pelatih Keseimbangan & Kelincahan',
+          description: 'Mengembangkan koordinasi dan kekuatan inti',
+          features: ['Desain modular', 'Konfigurasi dapat ditumpuk', 'Tahan cuaca'],
           image: '🏋️',
           color: 'bg-blue-100 dark:bg-blue-900/30',
         },
         {
           name: 'Plyoban',
-          spec: 'Plyometric Training Platform',
-          description: 'High-impact training equipment for strength & power',
-          features: ['20cm, 40cm heights', 'Colored coding system', 'Safe landing surface'],
+          spec: 'Platform Latihan Plyometrik',
+          description: 'Peralatan latihan berdampak tinggi untuk kekuatan & daya',
+          features: ['Tinggi 20cm, 40cm', 'Sistem kode warna', 'Permukaan pendaratan aman'],
           image: '📦',
           color: 'bg-red-100 dark:bg-red-900/30',
         },
         {
-          name: 'Tire Obstacle Course',
-          spec: 'Multi-Functional Training',
-          description: 'Complete fitness station combining multiple exercises',
-          features: ['Full-body workout', 'Team activities', 'Scalable difficulty'],
+          name: 'Rintangan Ban',
+          spec: 'Latihan Multi-Fungsional',
+          description: 'Stasiun fitness lengkap menggabungkan berbagai latihan',
+          features: ['Latihan seluruh tubuh', 'Aktivitas tim', 'Kesulitan dapat disesuaikan'],
           image: '🏃',
           color: 'bg-green-100 dark:bg-green-900/30',
         },
@@ -69,32 +69,32 @@ const solutionTabs = [
     id: 'living',
     label: 'Banafit Living',
     icon: Home,
-    description: 'Sustainable home & office furniture',
+    description: 'Furniture rumah & kantor berkelanjutan',
     content: {
-      tagline: 'Design Meets Sustainability',
-      intro: 'Transform spaces with eco-friendly furniture created from upcycled tires.',
+      tagline: 'Desain Bertemu Keberlanjutan',
+      intro: 'Transformasikan ruang dengan furnitur ramah lingkungan yang dibuat dari ban daur ulang.',
       products: [
         {
-          name: 'Tire Bookshelf',
-          spec: 'Storage Solution',
-          description: 'Modern design storage system',
-          features: ['Stackable units', 'Customizable layout', 'Durable & safe'],
+          name: 'Rak Buku Ban',
+          spec: 'Solusi Penyimpanan',
+          description: 'Sistem penyimpanan desain modern',
+          features: ['Unit dapat ditumpuk', 'Tata letak dapat disesuaikan', 'Tahan lama & aman'],
           image: '📚',
           color: 'bg-amber-100 dark:bg-amber-900/30',
         },
         {
-          name: 'Recycled Tire Table',
-          spec: 'Functional Furniture Piece',
-          description: 'Unique coffee or dining table',
-          features: ['Eye-catching design', 'Lightweight', 'Easy maintenance'],
+          name: 'Meja Ban Daur Ulang',
+          spec: 'Bagian Furnitur Fungsional',
+          description: 'Meja kopi atau makan yang unik',
+          features: ['Desain mencolok', 'Ringan', 'Mudah dirawat'],
           image: '🪑',
           color: 'bg-orange-100 dark:bg-orange-900/30',
         },
         {
-          name: 'Modular Seating',
-          spec: 'Flexible Furniture System',
-          description: 'Reconfigurable seating arrangements',
-          features: ['Multi-purpose use', 'Student-friendly', 'Space-saving'],
+          name: 'Tempat Duduk Modular',
+          spec: 'Sistem Furnitur Fleksibel',
+          description: 'Pengaturan tempat duduk yang dapat dikonfigurasi ulang',
+          features: ['Penggunaan multi-tujuan', 'Ramah siswa', 'Menghemat ruang'],
           image: '💺',
           color: 'bg-purple-100 dark:bg-purple-900/30',
         },
@@ -105,32 +105,32 @@ const solutionTabs = [
     id: 'edu',
     label: 'Banafit Edu',
     icon: BookOpen,
-    description: 'Integrated curriculum modules',
+    description: 'Modul kurikulum terintegrasi',
     content: {
-      tagline: 'Learning Through Sustainability',
-      intro: 'Curated educational modules aligned with Hardiknas 2026 vision.',
+      tagline: 'Belajar Melalui Keberlanjutan',
+      intro: 'Modul pendidikan yang dikurasi sesuai dengan visi Hardiknas 2026.',
       products: [
         {
-          name: 'Circular Economy Module',
-          spec: 'Economics & Environment',
-          description: 'Deep learning curriculum on waste management',
-          features: ['Grade 7-12 aligned', 'STEM integration', 'Hands-on projects'],
+          name: 'Modul Ekonomi Sirkular',
+          spec: 'Ekonomi & Lingkungan',
+          description: 'Kurikulum pembelajaran mendalam tentang manajemen limbah',
+          features: ['Selaras dengan Kelas 7-12', 'Integrasi STEM', 'Proyek praktis'],
           image: '♻️',
           color: 'bg-green-100 dark:bg-green-900/30',
         },
         {
-          name: 'Material Science Module',
-          spec: 'Physics & Chemistry',
-          description: 'Explore properties of recycled materials',
-          features: ['Lab-based learning', 'Interactive experiments', 'Career insights'],
+          name: 'Modul Ilmu Material',
+          spec: 'Fisika & Kimia',
+          description: 'Jelajahi sifat-sifat material daur ulang',
+          features: ['Pembelajaran berbasis lab', 'Eksperimen interaktif', 'Wawasan karir'],
           image: '🔬',
           color: 'bg-blue-100 dark:bg-blue-900/30',
         },
         {
-          name: 'Social Impact Module',
-          spec: 'Civics & Sustainability',
-          description: 'Community engagement and environmental advocacy',
-          features: ['Community projects', 'Leadership building', 'Real-world impact'],
+          name: 'Modul Dampak Sosial',
+          spec: 'Pendidikan Kewarganegaraan & Keberlanjutan',
+          description: 'Keterlibatan komunitas dan advokasi lingkungan',
+          features: ['Proyek komunitas', 'Pembangunan kepemimpinan', 'Dampak dunia nyata'],
           image: '🌍',
           color: 'bg-teal-100 dark:bg-teal-900/30',
         },
@@ -156,10 +156,10 @@ export function SolutionsSection() {
         {/* Header */}
         <motion.div className="text-center mb-12" variants={itemVariants}>
           <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-4">
-            The Ecosystem
+            Ekosistem Solusi
           </h1>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Three interconnected solutions transforming waste into value across sports, lifestyle, and education.
+            Tiga solusi saling terhubung mengubah limbah menjadi nilai di bidang olahraga, gaya hidup, dan pendidikan.
           </p>
         </motion.div>
 
@@ -268,16 +268,16 @@ export function SolutionsSection() {
             >
               {[
                 {
-                  title: 'Modular Design',
-                  description: 'Stackable and reconfigurable for any space or budget',
+                  title: 'Desain Modular',
+                  description: 'Dapat ditumpuk dan dikonfigurasi ulang untuk ruang atau anggaran apa pun',
                 },
                 {
-                  title: 'Cost-Effective',
-                  description: '60-70% cheaper than conventional equipment',
+                  title: 'Hemat Biaya',
+                  description: '60-70% lebih murah dari peralatan konvensional',
                 },
                 {
-                  title: 'Sustainable Impact',
-                  description: 'Each product diverts waste from landfills',
+                  title: 'Dampak Berkelanjutan',
+                  description: 'Setiap produk mengalihkan limbah dari tempat pembuangan akhir',
                 },
               ].map((benefit, index) => (
                 <motion.div
@@ -306,7 +306,7 @@ export function SolutionsSection() {
           variants={itemVariants}
         >
           <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-slate-900 font-bold rounded-lg text-lg transition-all hover:shadow-xl hover:shadow-yellow-400/50 transform hover:scale-105">
-            Request a Demo
+            Minta Demo
             <ChevronRight className="ml-2" size={24} />
           </button>
         </motion.div>

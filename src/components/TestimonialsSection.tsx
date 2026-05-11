@@ -83,10 +83,10 @@ export function TestimonialsSection() {
         {/* Header */}
         <motion.div className="text-center mb-12" variants={itemVariants}>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            What Students & Teachers Say
+            Apa Kata Siswa & Guru
           </h2>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-            Real stories from schools transformed by Banafit.
+            Kisah nyata dari sekolah yang berubah karena Banafit.
           </p>
         </motion.div>
 

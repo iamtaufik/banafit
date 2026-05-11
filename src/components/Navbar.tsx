@@ -5,13 +5,13 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 
 const NAV_ITEMS = [
-  { label: 'Home', href: '/' },
-  { label: 'The Issue', href: '/the-issue' },
-  { label: 'Scientific Approach', href: '/scientific-approach' },
-  { label: 'Solutions', href: '/solutions' },
-  { label: 'Experience', href: '/experience' },
-  { label: 'Impact', href: '/impact' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Beranda', href: '/' },
+  { label: 'Isu Limbah', href: '/the-issue' },
+  { label: 'Riset & Keamanan', href: '/scientific-approach' },
+  { label: 'Solusi', href: '/solutions' },
+  { label: 'Pengalaman', href: '/experience' },
+  { label: 'Dampak', href: '/impact' },
+  { label: 'Kontak', href: '/contact' },
 ];
 
 export function Navbar() {

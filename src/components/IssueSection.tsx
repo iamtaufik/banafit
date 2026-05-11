@@ -54,11 +54,11 @@ export function IssueSection() {
           <div className="flex items-center justify-center mb-4">
             <AlertCircle className="text-red-500 mr-3" size={32} />
             <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white">
-              The Issue
+              Data Limbah & Urgensi
             </h1>
           </div>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Understanding the crisis: waste tire management and inadequate sports facilities in rural schools.
+            Memahami krisis: manajemen limbah ban dan kurangnya fasilitas olahraga di sekolah pedesaan.
           </p>
         </motion.div>
 
@@ -74,13 +74,13 @@ export function IssueSection() {
             <div className="flex items-start justify-between">
               <div>
                 <p className="text-slate-600 dark:text-slate-400 text-sm font-medium mb-2">
-                  Annual Tire Waste
+                  Limbah Ban Tahunan
                 </p>
                 <p className="text-3xl sm:text-4xl font-bold text-red-600 dark:text-red-400 mb-2">
                   5,400+
                 </p>
                 <p className="text-sm text-slate-600 dark:text-slate-400">
-                  tons in DIY region
+                  ton di wilayah DIY
                 </p>
               </div>
               <TrendingUp className="text-red-500" size={24} />
@@ -94,13 +94,13 @@ export function IssueSection() {
             <div className="flex items-start justify-between">
               <div>
                 <p className="text-slate-600 dark:text-slate-400 text-sm font-medium mb-2">
-                  Schools Lacking Equipment
+                  Sekolah Kekurangan Peralatan
                 </p>
                 <p className="text-3xl sm:text-4xl font-bold text-orange-600 dark:text-orange-400 mb-2">
                   65%
                 </p>
                 <p className="text-sm text-slate-600 dark:text-slate-400">
-                  in rural Gunungkidul
+                  di Gunungkidul
                 </p>
               </div>
               <TrendingUp className="text-orange-500" size={24} />
@@ -114,13 +114,13 @@ export function IssueSection() {
             <div className="flex items-start justify-between">
               <div>
                 <p className="text-slate-600 dark:text-slate-400 text-sm font-medium mb-2">
-                  Students Impacted
+                  Siswa Terdampak
                 </p>
                 <p className="text-3xl sm:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">
                   25K+
                 </p>
                 <p className="text-sm text-slate-600 dark:text-slate-400">
-                  across target areas
+                  di area target
                 </p>
               </div>
               <TrendingUp className="text-blue-500" size={24} />
@@ -136,7 +136,7 @@ export function IssueSection() {
             variants={itemVariants}
           >
             <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">
-              Tire Waste Potential by Region
+              Potensi Limbah Ban per Wilayah
             </h3>
             <ResponsiveContainer width="100%" height={300}>
               <BarChart data={wasteData}>
@@ -164,7 +164,7 @@ export function IssueSection() {
             variants={itemVariants}
           >
             <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">
-              School Sports Facilities Status
+              Status Fasilitas Olahraga Sekolah
             </h3>
             <ResponsiveContainer width="100%" height={300}>
               <PieChart>
@@ -194,23 +194,23 @@ export function IssueSection() {
           variants={itemVariants}
         >
           <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-            The Twin Challenge
+            Tantangan Ganda
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <h4 className="font-bold text-red-600 dark:text-red-400 mb-2 text-lg">
-                Environmental Crisis
+                Krisis Lingkungan
               </h4>
               <p className="text-slate-700 dark:text-slate-300">
-                Over 5,400 tons of tire waste annually in Gunungkidul lacks proper management. When buried or burned, it causes soil contamination, water pollution, and respiratory health issues.
+                Lebih dari 5.400 ton limbah ban setiap tahun di Gunungkidul tidak terkelola dengan baik. Ketika dikubur atau dibakar, menyebabkan pencemaran tanah, polusi air, dan masalah kesehatan pernapasan.
               </p>
             </div>
             <div>
               <h4 className="font-bold text-orange-600 dark:text-orange-400 mb-2 text-lg">
-                Education Gap
+                Kesenjangan Pendidikan
               </h4>
               <p className="text-slate-700 dark:text-slate-300">
-                65% of rural schools lack adequate sports facilities and equipment. Students miss crucial physical development opportunities and quality PE education.
+                65% sekolah pedesaan kekurangan fasilitas dan peralatan olahraga yang memadai. Siswa kehilangan kesempatan penting untuk pengembangan fisik dan pendidikan PE berkualitas.
               </p>
             </div>
           </div>
