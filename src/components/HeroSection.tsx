@@ -34,7 +34,7 @@ export function HeroSection() {
       {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.22),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(234,179,8,0.18),transparent_30%)]" /> */}
        <div className="absolute right-0 top-0 h-full w-full lg:w-[62%]">
           <Image
-            src="/assets/background-kids-class.png"
+            src="/assets/kids-running-matras.png"
             alt="Kids Background"
             fill
             priority

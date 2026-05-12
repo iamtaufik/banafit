@@ -1,12 +1,12 @@
 import { HeroSection } from "@/components/HeroSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
-import { IssueSection } from "@/components/IssueSection";
+import { SolutionsSection } from "@/components/SolutionsSection";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <IssueSection />
+      <SolutionsSection />
       <TestimonialsSection />
     </>
   );

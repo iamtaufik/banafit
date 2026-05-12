@@ -27,11 +27,11 @@ const itemVariants = {
 };
 
 const nominationSchema = z.object({
-  nominatorName: z.string().min(2, 'Name required'),
-  organization: z.string().min(2, 'Organization required'),
-  email: z.string().email('Invalid email'),
-  awardName: z.string().min(2, 'Award name required'),
-  message: z.string().min(10, 'Message required'),
+  nominatorName: z.string().min(2, 'Nama wajib diisi'),
+  organization: z.string().min(2, 'Organisasi wajib diisi'),
+  email: z.string().email('Email tidak valid'),
+  awardName: z.string().min(2, 'Nama award wajib diisi'),
+  message: z.string().min(10, 'Pesan minimal 10 karakter'),
 });
 
 type NominationFormData = z.infer<typeof nominationSchema>;
@@ -61,10 +61,10 @@ export function ContactSection() {
         {/* Header */}
         <motion.div className="text-center mb-16" variants={itemVariants}>
           <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-4">
-            Get in Touch
+            Hubungi Kami
           </h1>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Connect with our team, nominate Banafit for international awards, or request technical information.
+            Hubungi tim kami, nominasikan Banafit untuk penghargaan internasional, atau minta informasi teknis.
           </p>
         </motion.div>
 
@@ -85,7 +85,7 @@ export function ContactSection() {
               contact@banafit.id
             </p>
             <p className="text-sm text-slate-500 dark:text-slate-400">
-              Response within 24 hours
+              Respons dalam 24 jam
             </p>
           </motion.div>
 
@@ -95,13 +95,13 @@ export function ContactSection() {
           >
             <Phone className="text-green-500 mb-4" size={32} />
             <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
-              Phone
+              Telepon
             </h3>
             <p className="text-slate-600 dark:text-slate-400 mb-2">
               +62 274 XXXXXX
             </p>
             <p className="text-sm text-slate-500 dark:text-slate-400">
-              Monday - Friday, 9 AM - 5 PM
+              Senin - Jumat, 09:00 - 17:00
             </p>
           </motion.div>
 
@@ -111,13 +111,13 @@ export function ContactSection() {
           >
             <MapPin className="text-red-500 mb-4" size={32} />
             <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
-              Location
+              Lokasi
             </h3>
             <p className="text-slate-600 dark:text-slate-400 mb-2">
               Gunungkidul, Yogyakarta
             </p>
             <p className="text-sm text-slate-500 dark:text-slate-400">
-              Innovation Center & Showroom
+              Pusat Inovasi & Showroom
             </p>
           </motion.div>
         </motion.div>
@@ -135,57 +135,57 @@ export function ContactSection() {
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-                  For Nikkei Nominators
+                  Untuk Nominator Nikkei
                 </h2>
                 <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                  Complete documentation package
+                  Paket dokumentasi lengkap
                 </p>
               </div>
             </div>
 
             <p className="text-slate-700 dark:text-slate-300 mb-6">
-              Expedite your nomination of Banafit to international awards and competitions. Our comprehensive press kit includes technical specifications, research documentation, and impact data.
+              Percepat nominasi Banafit ke penghargaan dan kompetisi internasional. Paket pers komprehensif kami mencakup spesifikasi teknis, dokumentasi penelitian, dan data dampak.
             </p>
 
             <div className="bg-white dark:bg-slate-800/50 rounded-lg p-6 mb-6">
               <h4 className="font-bold text-slate-900 dark:text-white mb-4">
-                Included Documents:
+                Dokumen yang Disertakan:
               </h4>
               <ul className="space-y-3">
                 <li className="flex items-start text-slate-700 dark:text-slate-300">
                   <span className="text-blue-500 mr-3">📄</span>
-                  <span>Product Technical Data & Specifications</span>
+                  <span>Data Teknis & Spesifikasi Produk</span>
                 </li>
                 <li className="flex items-start text-slate-700 dark:text-slate-300">
                   <span className="text-blue-500 mr-3">📊</span>
-                  <span>Scientific Research & Safety Certifications</span>
+                  <span>Penelitian Ilmiah & Sertifikasi Keamanan</span>
                 </li>
                 <li className="flex items-start text-slate-700 dark:text-slate-300">
                   <span className="text-blue-500 mr-3">🌍</span>
-                  <span>Environmental Impact Analysis</span>
+                  <span>Analisis Dampak Lingkungan</span>
                 </li>
                 <li className="flex items-start text-slate-700 dark:text-slate-300">
                   <span className="text-blue-500 mr-3">🎓</span>
-                  <span>Educational Module Curriculum Guide</span>
+                  <span>Panduan Kurikulum Modul Pendidikan</span>
                 </li>
                 <li className="flex items-start text-slate-700 dark:text-slate-300">
                   <span className="text-blue-500 mr-3">📸</span>
-                  <span>High-Resolution Brand Assets & Photography</span>
+                  <span>Aset Brand & Fotografi Resolusi Tinggi</span>
                 </li>
                 <li className="flex items-start text-slate-700 dark:text-slate-300">
                   <span className="text-blue-500 mr-3">📑</span>
-                  <span>Press Release & Media Kit</span>
+                  <span>Rilis Pers & Media Kit</span>
                 </li>
               </ul>
             </div>
 
             <button className="w-full px-6 py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold rounded-lg transition-all hover:shadow-lg flex items-center justify-center">
               <Download className="mr-2" size={20} />
-              Download Press Kit (PDF)
+              Unduh Press Kit (PDF)
             </button>
 
             <p className="text-xs text-slate-600 dark:text-slate-400 mt-4 text-center">
-              File size: 24 MB | Updated: May 2026
+              Ukuran file: 24 MB | Diperbarui: Mei 2026
             </p>
           </motion.div>
 
@@ -200,10 +200,10 @@ export function ContactSection() {
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-                  Submit Nomination
+                  Kirim Nominasi
                 </h2>
                 <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                  Nominate Banafit for awards
+                  Nominasikan Banafit untuk penghargaan
                 </p>
               </div>
             </div>
@@ -281,7 +281,7 @@ export function ContactSection() {
                     type="text"
                     {...register('awardName')}
                     className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-lg dark:bg-slate-700 dark:text-white"
-                    placeholder="e.g., Nikkei Global CSR Award 2026"
+                    placeholder="Mis. Nikkei Global CSR Award 2026"
                   />
                   {errors.awardName && (
                     <p className="text-red-500 text-sm mt-1">{errors.awardName.message}</p>
@@ -322,10 +322,10 @@ export function ContactSection() {
           variants={itemVariants}
         >
           <h2 className="text-2xl font-bold text-slate-900 dark:text-white text-center mb-8">
-            Supported By & Partners
+            Didukung Oleh & Mitra
           </h2>
           <p className="text-center text-slate-600 dark:text-slate-400 mb-6">
-            Banafit is recognized and supported by leading environmental, educational, and sustainable innovation organizations.
+            Banafit diakui dan didukung oleh organisasi lingkungan, pendidikan, dan inovasi berkelanjutan terkemuka.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {['ERI Korlantas Polri', 'Indonesian Ministry of Education', 'Nikkei Inc.', 'Sustainable Brands'].map(
@@ -347,10 +347,10 @@ export function ContactSection() {
         {/* Footer CTA */}
         <motion.div className="mt-12 text-center" variants={itemVariants}>
           <p className="text-slate-600 dark:text-slate-400 mb-4">
-            Questions? Our team is ready to help.
+            Ada pertanyaan? Tim kami siap membantu.
           </p>
           <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold rounded-lg transition-all hover:shadow-xl">
-            Schedule a Call
+            Jadwalkan Konsultasi
           </button>
         </motion.div>
       </motion.div>

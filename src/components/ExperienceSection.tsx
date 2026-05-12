@@ -28,12 +28,12 @@ const itemVariants = {
 
 // Form validation schema
 const workshopFormSchema = z.object({
-  fullName: z.string().min(2, 'Name must be at least 2 characters'),
-  email: z.string().email('Invalid email address'),
-  school: z.string().min(2, 'School name required'),
-  phoneNumber: z.string().min(10, 'Phone number must be valid'),
+  fullName: z.string().min(2, 'Nama minimal 2 karakter'),
+  email: z.string().email('Alamat email tidak valid'),
+  school: z.string().min(2, 'Nama sekolah wajib diisi'),
+  phoneNumber: z.string().min(10, 'Nomor telepon harus valid'),
   coursePreference: z.enum(['beginner', 'intermediate', 'advanced']),
-  participants: z.string().min(1, 'Number of participants required'),
+  participants: z.string().min(1, 'Jumlah peserta wajib diisi'),
 });
 
 type WorkshopFormData = z.infer<typeof workshopFormSchema>;
@@ -56,33 +56,33 @@ export function ExperienceSection() {
 
   const timelineSteps = [
     {
-      title: 'Tire Collection',
-      description: 'Gather end-of-life tires from local sources',
+      title: 'Pengumpulan Ban',
+      description: 'Kumpulkan ban yang sudah habis umur dari sumber lokal',
       icon: '♻️',
     },
     {
-      title: 'Material Processing',
-      description: 'Clean, cut, and prepare raw materials',
+      title: 'Pemrosesan Material',
+      description: 'Bersihkan, potong, dan siapkan bahan baku',
       icon: '🔧',
     },
     {
-      title: 'Coating Application',
-      description: 'Apply barrier coating technology',
+      title: 'Aplikasi Lapisan',
+      description: 'Terapkan teknologi lapisan penghalang',
       icon: '🎨',
     },
     {
-      title: 'Quality Testing',
-      description: 'Safety certification and quality assurance',
+      title: 'Pengujian Kualitas',
+      description: 'Sertifikasi keselamatan dan jaminan kualitas',
       icon: '✅',
     },
     {
-      title: 'Product Assembly',
-      description: 'Build finished products and furniture',
+      title: 'Perakitan Produk',
+      description: 'Bangun produk jadi dan furnitur',
       icon: '🏗️',
     },
     {
-      title: 'Educational Impact',
-      description: 'Delivered to schools for student learning',
+      title: 'Dampak Pendidikan',
+      description: 'Dikirim ke sekolah untuk pembelajaran siswa',
       icon: '🎓',
     },
   ];
@@ -99,10 +99,10 @@ export function ExperienceSection() {
         {/* Header */}
         <motion.div className="text-center mb-16" variants={itemVariants}>
           <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-4">
-            Experience Banafit
+            Alami Banafit
           </h1>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Learn, engage, and witness the transformation from waste to wonder.
+            Belajar, berpartisipasi, dan saksikan transformasi dari limbah menjadi keajaiban.
           </p>
         </motion.div>
 
@@ -120,10 +120,10 @@ export function ExperienceSection() {
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-                  Workshop Track
+                  Jalur Workshop
                 </h2>
                 <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                  Hands-on learning experiences
+                  Pengalaman pembelajaran langsung
                 </p>
               </div>
             </div>
@@ -132,21 +132,21 @@ export function ExperienceSection() {
               "Belajar Re-Engineering Limbah"
             </h3>
             <p className="text-slate-700 dark:text-slate-300 mb-6">
-              A comprehensive certification program teaching educators and community members how to transform waste tires into valuable educational resources.
+              Program sertifikasi komprehensif yang mengajarkan pendidik dan anggota komunitas cara mengubah ban bekas menjadi sumber daya pendidikan yang berharga.
             </p>
 
             <div className="space-y-3 mb-6">
               <div className="flex items-center text-slate-700 dark:text-slate-300">
                 <Clock className="text-blue-500 mr-3" size={20} />
-                <span>3-day intensive workshop</span>
+                <span>Workshop intensif 3 hari</span>
               </div>
               <div className="flex items-center text-slate-700 dark:text-slate-300">
                 <MapPin className="text-blue-500 mr-3" size={20} />
-                <span>On-site or school location</span>
+                <span>Di lokasi sekolah atau tempat lain</span>
               </div>
               <div className="flex items-center text-slate-700 dark:text-slate-300">
                 <CheckCircle className="text-blue-500 mr-3" size={20} />
-                <span>Official certification upon completion</span>
+                <span>Sertifikasi resmi setelah selesai</span>
               </div>
             </div>
 

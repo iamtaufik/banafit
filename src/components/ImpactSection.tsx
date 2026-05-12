@@ -32,9 +32,9 @@ const impactProjection = [
 ];
 
 const impactMetrics = [
-  { name: 'Waste Diverted (tons)', value: 500, percentage: 35 },
-  { name: 'Equipment Donated', value: 400, percentage: 40 },
-  { name: 'Teachers Trained', value: 200, percentage: 25 },
+  { name: 'Limbah Dialihkan (ton)', value: 500, percentage: 35 },
+  { name: 'Peralatan Disumbangkan', value: 400, percentage: 40 },
+  { name: 'Guru Dilatih', value: 200, percentage: 25 },
 ];
 
 const colors = ['#22c55e', '#3b82f6', '#f59e0b'];
@@ -54,14 +54,14 @@ export function ImpactSection() {
           <div className="flex items-center justify-center mb-4">
             <Target className="text-orange-500 mr-3" size={40} />
             <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white">
-              Our Impact Goal
+              Target Dampak Kami
             </h1>
           </div>
           <p className="text-2xl font-bold text-orange-600 dark:text-orange-400 mb-4">
-            100 Schools by 2026
+            100 Sekolah pada 2026
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Transforming physical education and environmental consciousness across Indonesia.
+            Transformasi pendidikan jasmani dan kesadaran lingkungan di seluruh Indonesia.
           </p>
         </motion.div>
 
@@ -71,10 +71,10 @@ export function ImpactSection() {
           variants={containerVariants}
         >
           {[
-            { icon: Target, label: 'Target Schools', value: '100', unit: 'by 2026', color: 'orange' as const },
-            { icon: Users, label: 'Students Impacted', value: '5K+', unit: 'annually', color: 'blue' as const },
-            { icon: TrendingUp, label: 'Waste Diverted', value: '500+', unit: 'tons/year', color: 'green' as const },
-            { icon: Award, label: 'Teachers Trained', value: '200+', unit: 'certified', color: 'purple' as const },
+            { icon: Target, label: 'Sekolah Target', value: '100', unit: 'pada 2026', color: 'orange' as const },
+            { icon: Users, label: 'Siswa Terdampak', value: '5K+', unit: 'setiap tahun', color: 'blue' as const },
+            { icon: TrendingUp, label: 'Limbah Dialihkan', value: '500+', unit: 'ton/tahun', color: 'green' as const },
+            { icon: Award, label: 'Guru Dilatih', value: '200+', unit: 'tersertifikasi', color: 'purple' as const },
           ].map((metric, index) => {
             const IconComponent = metric.icon;
             const colorClasses: Record<string, string> = {
