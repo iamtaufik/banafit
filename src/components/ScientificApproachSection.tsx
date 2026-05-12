@@ -26,18 +26,18 @@ const itemVariants = {
 const experts = [
   {
     name: 'Dr. Yudan',
-    title: 'Materials Science Specialist',
-    credentials: 'PhD in Polymer Engineering',
-    expertise: 'Barrier coating technology & surface treatment',
-    bio: 'Leading expert in sustainable material transformation with 15+ years of research in tire material science.',
+    title: 'Spesialis Ilmu Material',
+    credentials: 'PhD dalam Teknik Polimer',
+    expertise: 'Teknologi lapisan penghalang & perlakuan permukaan',
+    bio: 'Ahli terkemuka dalam transformasi material berkelanjutan dengan 15+ tahun penelitian dalam ilmu material ban.',
     icon: Beaker,
   },
   {
     name: 'Dr. Thotik',
-    title: 'Environmental & Safety Expert',
-    credentials: 'PhD in Environmental Engineering',
-    expertise: 'Zero-volatile emissions & child safety standards',
-    bio: 'Pioneering safe material processing with emphasis on child protection and environmental compliance.',
+    title: 'Ahli Lingkungan & Keselamatan',
+    credentials: 'PhD dalam Teknik Lingkungan',
+    expertise: 'Emisi nol volatil & standar keselamatan anak',
+    bio: 'Pelopor pemrosesan material aman dengan penekanan pada perlindungan anak dan kepatuhan lingkungan.',
     icon: Shield,
   },
 ];
@@ -57,11 +57,11 @@ export function ScientificApproachSection() {
           <div className="flex items-center justify-center mb-4">
             <Beaker className="text-blue-500 mr-3" size={32} />
             <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white">
-              Scientific Approach
+              Pendekatan Ilmiah
             </h1>
           </div>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Rigorous research, proven safety, and expert-backed innovation.
+            Penelitian ketat, keselamatan terbukti, dan inovasi didukung ahli.
           </p>
         </motion.div>
 
@@ -79,24 +79,24 @@ export function ScientificApproachSection() {
                 <Shield className="text-blue-600 dark:text-blue-400" size={24} />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
-                Barrier Coating Technology
+                Teknologi Lapisan Penghalang
               </h3>
             </div>
             <p className="text-slate-600 dark:text-slate-300 mb-4">
-              Our proprietary process applies a protective coating to recycled tire materials, creating a safe, durable surface that:
+              Proses proprietari kami menerapkan lapisan pelindung ke material ban daur ulang, menciptakan permukaan yang aman dan tahan lama yang:
             </p>
             <ul className="space-y-2">
               <li className="flex items-center text-slate-700 dark:text-slate-200">
                 <CheckCircle className="text-green-500 mr-2" size={20} />
-                Eliminates micro-particle shedding
+                Menghilangkan penumpahan partikel mikro
               </li>
               <li className="flex items-center text-slate-700 dark:text-slate-200">
                 <CheckCircle className="text-green-500 mr-2" size={20} />
-                Prevents chemical leaching
+                Mencegah pencucian bahan kimia
               </li>
               <li className="flex items-center text-slate-700 dark:text-slate-200">
                 <CheckCircle className="text-green-500 mr-2" size={20} />
-                Enhances durability & impact resistance
+                Meningkatkan daya tahan & ketahanan dampak
               </li>
             </ul>
           </motion.div>
@@ -110,24 +110,24 @@ export function ScientificApproachSection() {
                 <CheckCircle className="text-green-600 dark:text-green-400" size={24} />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
-                Zero-Volatile Emissions
+                Emisi Nol Volatil
               </h3>
             </div>
             <p className="text-slate-600 dark:text-slate-300 mb-4">
-              Our manufacturing process produces zero volatile organic compounds (VOCs):
+              Proses manufaktur kami menghasilkan nol senyawa organik yang mudah menguap (VOC):
             </p>
             <ul className="space-y-2">
               <li className="flex items-center text-slate-700 dark:text-slate-200">
                 <CheckCircle className="text-green-500 mr-2" size={20} />
-                Complies with ISO 8124 toy safety standards
+                Mematuhi standar keselamatan mainan ISO 8124
               </li>
               <li className="flex items-center text-slate-700 dark:text-slate-200">
                 <CheckCircle className="text-green-500 mr-2" size={20} />
-                Meets EU EN 71 material requirements
+                Memenuhi persyaratan material EU EN 71
               </li>
               <li className="flex items-center text-slate-700 dark:text-slate-200">
                 <CheckCircle className="text-green-500 mr-2" size={20} />
-                Safe for extended child contact
+                Aman untuk kontak anak yang lama
               </li>
             </ul>
           </motion.div>
@@ -138,7 +138,7 @@ export function ScientificApproachSection() {
           <div className="flex items-center justify-center mb-8">
             <Users className="text-purple-500 mr-3" size={32} />
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
-              Expert Consultation Team
+              Tim Konsultasi Ahli
             </h2>
           </div>
 
@@ -176,7 +176,7 @@ export function ScientificApproachSection() {
                     </p>
 
                     <p className="text-base font-semibold text-slate-800 dark:text-slate-200 mb-3">
-                      Expertise: {expert.expertise}
+                      Keahlian: {expert.expertise}
                     </p>
 
                     <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -185,7 +185,7 @@ export function ScientificApproachSection() {
 
                     {/* Hover reveal CTA */}
                     <button className="mt-4 w-full px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-lg font-medium hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">
-                      View Full Profile →
+                      Lihat Profil Lengkap →
                     </button>
                   </div>
                 </motion.div>
@@ -200,30 +200,30 @@ export function ScientificApproachSection() {
           variants={itemVariants}
         >
           <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center">
-            Our Research & Safety Process
+            Proses Penelitian & Keselamatan Kami
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {[
               {
                 step: '1',
-                label: 'Material Testing',
-                description: 'Chemical composition analysis & contamination screening',
+                label: 'Pengujian Material',
+                description: 'Analisis komposisi kimia & penyaringan kontaminasi',
               },
               {
                 step: '2',
-                label: 'Coating Development',
-                description: 'Barrier technology refinement & durability testing',
+                label: 'Pengembangan Lapisan',
+                description: 'Penyempurnaan teknologi penghalang & pengujian daya tahan',
               },
               {
                 step: '3',
-                label: 'Safety Certification',
-                description: 'ISO 8124 & EU compliance verification',
+                label: 'Sertifikasi Keselamatan',
+                description: 'Verifikasi kepatuhan ISO 8124 & EU',
               },
               {
                 step: '4',
-                label: 'Field Validation',
-                description: 'Real-world testing in school environments',
+                label: 'Validasi Lapangan',
+                description: 'Pengujian dunia nyata di lingkungan sekolah',
               },
             ].map((item, index) => (
               <motion.div
@@ -259,7 +259,7 @@ export function ScientificApproachSection() {
             href="#"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold rounded-lg text-lg transition-all hover:shadow-xl hover:shadow-blue-500/30"
           >
-            Download Technical & Safety Documentation
+            Unduh Dokumentasi Teknis & Keselamatan
             <span className="ml-2">↓</span>
           </a>
         </motion.div>

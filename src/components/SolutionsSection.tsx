@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
@@ -34,6 +35,7 @@ const solutionTabs = [
     label: 'Banafit Sports',
     icon: Dumbbell,
     description: 'Peralatan stasiun latihan modular',
+    heroImage: '/assets/kids-playing-outside.png',
     content: {
       tagline: 'Revolusionkan Pelajaran PE',
       intro: 'Stasiun latihan olahraga modular yang dibangun dari ban daur ulang berkelanjutan.',
@@ -43,7 +45,7 @@ const solutionTabs = [
           spec: 'Pelatih Keseimbangan & Kelincahan',
           description: 'Mengembangkan koordinasi dan kekuatan inti',
           features: ['Desain modular', 'Konfigurasi dapat ditumpuk', 'Tahan cuaca'],
-          image: '🏋️',
+          image: '/assets/kids-playing-outside.png',
           color: 'bg-blue-100 dark:bg-blue-900/30',
         },
         {
@@ -51,7 +53,7 @@ const solutionTabs = [
           spec: 'Platform Latihan Plyometrik',
           description: 'Peralatan latihan berdampak tinggi untuk kekuatan & daya',
           features: ['Tinggi 20cm, 40cm', 'Sistem kode warna', 'Permukaan pendaratan aman'],
-          image: '📦',
+          image: '/assets/kids-playing-plyoban.png',
           color: 'bg-red-100 dark:bg-red-900/30',
         },
         {
@@ -59,7 +61,7 @@ const solutionTabs = [
           spec: 'Latihan Multi-Fungsional',
           description: 'Stasiun fitness lengkap menggabungkan berbagai latihan',
           features: ['Latihan seluruh tubuh', 'Aktivitas tim', 'Kesulitan dapat disesuaikan'],
-          image: '🏃',
+          image: '/assets/kids-playing-zig-zag.png',
           color: 'bg-green-100 dark:bg-green-900/30',
         },
       ],
@@ -70,6 +72,7 @@ const solutionTabs = [
     label: 'Banafit Living',
     icon: Home,
     description: 'Furniture rumah & kantor berkelanjutan',
+    heroImage: '/assets/kids-running-matras.png',
     content: {
       tagline: 'Desain Bertemu Keberlanjutan',
       intro: 'Transformasikan ruang dengan furnitur ramah lingkungan yang dibuat dari ban daur ulang.',
@@ -106,6 +109,7 @@ const solutionTabs = [
     label: 'Banafit Edu',
     icon: BookOpen,
     description: 'Modul kurikulum terintegrasi',
+    heroImage: '/assets/background-kids-class.png',
     content: {
       tagline: 'Belajar Melalui Keberlanjutan',
       intro: 'Modul pendidikan yang dikurasi sesuai dengan visi Hardiknas 2026.',
@@ -189,15 +193,35 @@ export function SolutionsSection() {
         </motion.div>
 
         {/* Tab Content */}
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           <motion.div
             key={activeTab}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.3 }}
             className="space-y-12"
           >
+            {/* Hero Image */}
+            <motion.div
+              key={`hero-${activeTab}`}
+              className="relative w-full h-64 sm:h-80 rounded-lg overflow-hidden shadow-lg"
+              variants={itemVariants}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <Image
+                src={activeTabData.heroImage}
+                alt={activeTabData.label}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 85vw"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
+            </motion.div>
+
             {/* Category Header */}
             <motion.div className="text-center" variants={itemVariants}>
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-2">
@@ -213,7 +237,7 @@ export function SolutionsSection() {
 
             {/* Products Carousel */}
             <motion.div
-              className="bg-slate-50 dark:bg-slate-900 rounded-lg p-6 sm:p-8"
+              className="bg-slate-50 dark:bg-slate-900 rounded-lg p-6 sm:p-8 min-h-[400px] sm:min-h-[450px]"
               variants={itemVariants}
             >
               <Swiper
@@ -226,15 +250,28 @@ export function SolutionsSection() {
                 }}
                 pagination={{ clickable: true }}
                 autoplay={{ delay: 5000, disableOnInteraction: true }}
-                className="w-full"
+                className="w-full h-full"
               >
                 {activeContent.products.map((product, index) => (
-                  <SwiperSlide key={index}>
+                  <SwiperSlide key={`${activeTab}-${index}`}>
                     <motion.div
-                      className={`${product.color} rounded-lg p-6 h-full border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow`}
+                      className={`${product.color} rounded-lg p-6 h-full border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow flex flex-col`}
                       whileHover={{ scale: 1.05 }}
                     >
-                      <div className="text-4xl mb-4">{product.image}</div>
+                      {product.image.startsWith('/') ? (
+                        <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-700">
+                          <Image
+                            key={`product-${activeTab}-${index}`}
+                            src={product.image}
+                            alt={product.name}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          />
+                        </div>
+                      ) : (
+                        <div className="text-4xl mb-4">{product.image}</div>
+                      )}
                       <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-1">
                         {product.name}
                       </h4>
@@ -244,7 +281,7 @@ export function SolutionsSection() {
                       <p className="text-slate-700 dark:text-slate-300 mb-4 text-sm">
                         {product.description}
                       </p>
-                      <ul className="space-y-1 mb-4">
+                      <ul className="space-y-1 mb-4 flex-grow">
                         {product.features.map((feature, i) => (
                           <li key={i} className="text-xs text-slate-600 dark:text-slate-400 flex items-start">
                             <span className="mr-2">✓</span>
