@@ -12,6 +12,13 @@ export const metadata: Metadata = {
   title: "Banafit - Energizing Sustainable Innovation",
   description:
     "Revolutionizing physical education through circular economy solutions from waste tires. Sports equipment, furniture, and educational modules.",
+  keywords: ['banafit', 'ban', 'olahraga', 'sekolah', 'inovasi', 'ban bekas', 'gunungkidul', 'banafit gunungkidul'],
+  robots: "index, follow",
+  authors: [
+    {
+      name: "Banafit Team",
+    },
+  ],
 };
 
 export default function RootLayout({
